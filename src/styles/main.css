@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-gb-white: #f1f1f1;
+  --color-gb-lt-grey: #d2d2d2;
+  --color-gb-md-grey: #ededf0;
+  --color-gb-dk-grey: #29292e;
+  --color-gb-black: #231f20;
+  --color-gb-lt-purple: #aaaad4;
+  --color-gb-md-purple: #1a1a30;
+  --color-gb-dk-purple: #141425;
+
+  --font-copy: Oswald, "Helvetica", "Arial", "sans-serif";
+  --font-heading: Oswald, "Helvetica", "Arial", "sans-serif";
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.75rem;
+  --text-4xl: 2rem;
+  --text-5xl: 2.5rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+}
+
+@utility bg-rad-grad {
+  background-image: radial-gradient(circle, #1a1a30 50%, #141425 100%);
+}
+@utility bg-rad-grad-90 {
+  background-image: radial-gradient(
+    circle,
+    rgba(26, 26, 48, 0.9) 50%,
+    rgba(20, 20, 37, 0.9) 100%
+  );
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    @apply text-gb-white;
+  }
+
+  main {
+    position: relative;
+  }
+
+  section {
+    min-height: 100vh;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2;
+    font-weight: 300;
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 4.5em;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  background: var(--bg-rad-grad);
+
+  @apply relative
+  min-h-screen
+  min-w-[20rem]
+  bg-rad-grad
+  bg-fixed
+  font-copy
+  text-xl
+  font-light
+  leading-[1.2]
+  md:text-sm
+  bg-gb-dk-purple;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    padding-right: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #000000e1;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    border: none;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .c-scrollbar_thumb {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    opacity: 0.5;
+    width: 1px;
+    border-radius: 10px;
+    margin: 4px;
+    height: 100vh;
+  }
+}
