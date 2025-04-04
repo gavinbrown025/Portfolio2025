@@ -1,9 +1,15 @@
-import "./assets/main.css";
+import "@/styles/main.css";
+
 import { createApp } from "vue";
 import App from "./App.vue";
+
+import router from "@/router/index.ts";
+
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
 
+import { MotionPlugin } from "@vueuse/motion";
+
 Amplify.configure(outputs);
 
-createApp(App).mount("#app");
+createApp(App).use(router).use(MotionPlugin).mount("#app");
