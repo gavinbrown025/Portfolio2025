@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, computed } from 'vue'
 // import Logo from '@/components/UI/UILogo.vue'
 const radii = {

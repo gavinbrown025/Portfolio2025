@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import '@/assets/main.css';
 import { onMounted, ref } from 'vue';
 import type { Schema } from '../../amplify/data/resource';
@@ -14,7 +14,7 @@ function listTodos() {
     next: ({ items, isSynced }) => {
       todos.value = items
      },
-  }); 
+  });
 }
 
 function createTodo() {
@@ -25,7 +25,7 @@ function createTodo() {
     listTodos();
   });
 }
-    
+
 // fetch todos when the component is mounted
  onMounted(() => {
   listTodos();
@@ -38,8 +38,8 @@ function createTodo() {
     <h1>My todos</h1>
     <button @click="createTodo">+ new</button>
     <ul>
-      <li 
-        v-for="todo in todos" 
+      <li
+        v-for="todo in todos"
         :key="todo.id">
         {{ todo.content }}
       </li>
