@@ -41,7 +41,7 @@ const pathLength = computed(() => {
 svg path {
   stroke-miterlimit: 10;
   stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-  animation: draw 2.5s ease-in-out 1s forwards;
+  stroke-dashoffset: 1000;
+  animation: draw 2.5s ease-in-out 500ms forwards;
 }
 </style>

@@ -1,6 +1,8 @@
 <script setup>
 import { RouterView } from "vue-router";
 import TheNav from "@/components/TheNav.vue";
+import TheHeader from "@/components/TheHeader.vue";
+import TheProfile from "@/components/TheProfile.vue";
 
 const motion = {
   hidden: {
@@ -26,6 +28,8 @@ const motion = {
     class="relative"
   >
     <TheNav class="relative z-10" />
+    <TheHeader class="min-h-screen" />
+    <TheProfile class="min-h-screen" />
     <RouterView />
   </main>
 </template>
