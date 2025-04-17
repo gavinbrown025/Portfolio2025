@@ -96,10 +96,11 @@ body {
   bg-rad-grad
   bg-fixed
   font-copy
-  text-xl
   font-light
   leading-[1.2]
-  md:text-sm
+  text-base
+  md:text-lg
+  lg:text-xl
   bg-gb-dk-purple;
 
   &::-webkit-scrollbar {

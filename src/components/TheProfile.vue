@@ -1,6 +1,11 @@
 <template>
-  <section>
-    <UIContainer class="my-20 grid min-h-min items-center">
+  <section class="min-h-screen">
+    <UIContainer
+      v-motion
+      :initial="fadeInBottom.initial"
+      :visible-once="fadeInBottom.visibleOnce"
+      class="py-12 grid min-h-min items-center"
+    >
       <div class="flex flex-wrap items-center gap-12">
         <div class="shrink grow basis-1/3">
           <h2 class="mb-8">Profile</h2>
@@ -41,22 +46,23 @@
 </template>
 
 <script setup>
-import UIContainer from '@/components/UI/UIContainer.vue'
+import UIContainer from "@/components/UI/UIContainer.vue";
+import { fadeInBottom } from "@/utils/useAnimation.js";
 
 const skillLists = [
   {
-    title: 'Languages',
-    items: ['HTML5', 'CSS3 (SCSS)', 'JavaScript (ES6)', 'PHP', 'MYSQL'],
+    title: "Languages",
+    items: ["HTML5", "CSS3 (SCSS)", "JavaScript (ES6)", "PHP", "MYSQL"],
   },
   {
-    title: 'Frameworks',
-    items: ['Vue', 'React', 'Node', 'Vitest', 'WebFlow', 'Shopify'],
+    title: "Frameworks",
+    items: ["Vue", "React", "Node", "Vitest", "WebFlow", "Shopify"],
   },
   {
-    title: 'Tools',
-    items: ['Gitub', 'Adobe Suite', 'Jira', 'Slack', 'GSAP'],
+    title: "Tools",
+    items: ["Gitub", "Adobe Suite", "Jira", "Slack", "GSAP"],
   },
-]
+];
 </script>
 
 <style scoped>
