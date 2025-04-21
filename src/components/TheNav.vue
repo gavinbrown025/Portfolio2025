@@ -54,8 +54,8 @@ const isLarge = useBreakpoints(breakpointsTailwind).greaterOrEqual("sm");
 watch(isLarge, (nv) => nv && (isOpen.value = false));
 
 const links = [
-  { name: "Work", to: "#work" },
   { name: "Profile", to: "#profile" },
+  { name: "Experience", to: "#experience" },
   { name: "Contact", to: "#contact" },
 ];
 </script>

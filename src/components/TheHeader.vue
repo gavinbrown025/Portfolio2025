@@ -13,17 +13,17 @@ import UIContainer from "@/components/UI/UIContainer.vue";
       <header class="w-full min-w-min py-24 col-start-1 row-start-1 col-span-2 sm:col-span-1 text-center sm:text-left justify-center sm:justify-start">
         <h1 class="text-[3.5rem] lg:text-5xl">Gavin Brown</h1>
         <h2 class="mb-8">Frontend Developer</h2>
-        <p class="mb-12">
+        <p class="mb-16">
           Creating web interfaces to make your digital experiences smooth and
           some more words here.
         </p>
 
         <div class="flex flex-wrap sm:flex-nowrap  gap-8 justify-center sm:justify-start">
           <RouterLink to="/about">
-            <UIButtonAnim>About</UIButtonAnim>
+            <UIButtonAnim>Experience</UIButtonAnim>
           </RouterLink>
           <UIButtonAnim>
-            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/">Resume</RouterLink>
           </UIButtonAnim>
         </div>
       </header>
