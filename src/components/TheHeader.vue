@@ -28,7 +28,7 @@ import UIContainer from "@/components/UI/UIContainer.vue";
         </div>
       </header>
 
-      <div class="col-start-1 row-start-1 col-span-2 sm:col-start-2 sm:col-start-2 justify-self-end h-2/3 w-2/3 sm:w-full relative -z-1 flex items-center">
+      <div class="col-start-1 row-start-1 col-span-2 sm:col-start-2 sm:col-start-2 justify-self-end h-2/3 w-full relative -z-1 flex items-center">
         <UIShape />
       </div>
     </UIContainer>
