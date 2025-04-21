@@ -13,7 +13,7 @@ button {
     @apply absolute left-4 h-8 w-4 -translate-y-full border-l border-r transition-all duration-500;
   }
   &:hover {
-    @apply bg-gb-lt-purple text-gb-dk-grey;
+    @apply bg-gb-lt-purple text-black;
     .lines {
       @apply -translate-y-0;
       border-color: black;

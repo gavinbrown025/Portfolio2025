@@ -4,7 +4,7 @@
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
-      class="py-12 grid min-h-min items-center max-w-fit "
+      class="pt-12 pb-48 grid min-h-min items-center max-w-fit "
     >
       <div class="flex flex-wrap items-center gap-12">
         <div class="shrink grow basis-1/3">

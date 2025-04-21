@@ -29,9 +29,9 @@
           @click="isOpen = false"
           @keydown.enter="isOpen = false"
           >
-          <a class="block text-right px-4 py-2" :href="link.to">{{
+          <RouterLink class="block text-right px-4 py-2" :to="link.to">{{
             link.name
-          }}</a>
+          }}</RouterLink>
         </li>
       </ul>
     </nav>

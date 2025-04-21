@@ -1,13 +1,13 @@
 <template>
-  <section class="flex">
-    <UIContainer class="basis-1/2">
+  <section class="flex flex-wrap">
+    <UIContainer class="sm:basis-1/2">
       <form
         @submit.prevent="sendMail"
         id="contact-form"
         method="post"
         class="space-y-8"
       >
-        <h3>What can I do for you?</h3>
+        <h2>What can I do for you?</h2>
         <div v-for="{ name, type, label } in inputs" :key="name">
           <UIInput
             v-model="formData[name]"
@@ -23,7 +23,7 @@
         </div>
       </form>
     </UIContainer>
-    <div class="basis-1/2"></div>
+    <div class="sm:basis-1/2"></div>
   </section>
 </template>
 
