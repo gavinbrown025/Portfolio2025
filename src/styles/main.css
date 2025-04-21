@@ -7,20 +7,25 @@
   --color-gb-md-grey: #ededf0;
   --color-gb-dk-grey: #29292e;
   --color-gb-black: #231f20;
-  --color-gb-lt-purple: #aaaad4;
+  --color-gb-lt-purple: #515170;
   --color-gb-md-purple: #1a1a30;
   --color-gb-dk-purple: #141425;
 
   --font-copy: Oswald, "Helvetica", "Arial", "sans-serif";
   --font-heading: Oswald, "Helvetica", "Arial", "sans-serif";
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.75rem;
-  --text-4xl: 2rem;
-  --text-5xl: 2.5rem;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-xl: 2rem;
+  --text-sm: 0.875em;
+  --text-base: 1em;
+  --text-lg: 1.25em;
+  --text-xl: 1.75em;
+  --text-2xl: 2em;
+  --text-3xl: 2.5em;
+  --text-4xl: 3em;
+  --text-5xl: 3.5em;
+  --text-6xl: 4em;
+  --radius-sm: 0.25em;
+  --radius-sm: 0.5em;
+  --radius-lg: 1em;
+  --radius-xl: 2em;
 }
 
 @utility bg-rad-grad {
@@ -45,12 +50,62 @@
     @apply text-gb-white;
   }
 
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+    background: var(--bg-rad-grad);
+
+    @apply relative
+    min-h-screen
+    min-w-[20rem]
+    bg-rad-grad
+    bg-fixed
+    font-copy
+    font-light
+    leading-[1.2]
+    text-[1remrem]
+    sm:text-[1rem]
+    lg:text-[1.125rem]
+    xl:text-[1.25rem]
+    bg-gb-dk-purple;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+      padding-right: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #000000e1;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+      border: none;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+    .c-scrollbar_thumb {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: white;
+      opacity: 0.5;
+      width: 1px;
+      border-radius: 10px;
+      margin: 4px;
+      height: 100vh;
+    }
+  }
+
   main {
     position: relative;
+    overflow-x: hidden;
   }
 
   section {
     min-height: 100vh;
+    width: 100%;
   }
 
   ul,
@@ -73,58 +128,11 @@
   h6 {
     line-height: 1.2;
     font-weight: 300;
-    font-size: 2em;
   }
   h1 {
-    font-size: 4.5em;
+    @apply text-4xl;
   }
   h2 {
-    font-size: 3.5em;
-  }
-}
-
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: normal;
-  background: var(--bg-rad-grad);
-
-  @apply relative
-  min-h-screen
-  min-w-[20rem]
-  bg-rad-grad
-  bg-fixed
-  font-copy
-  text-xl
-  font-light
-  leading-[1.2]
-  md:text-sm
-  bg-gb-dk-purple;
-
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-    padding-right: 4px;
-  }
-  &::-webkit-scrollbar-track {
-    background: #000000e1;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 0;
-    border: none;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0);
-    }
-  }
-  .c-scrollbar_thumb {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: white;
-    opacity: 0.5;
-    width: 1px;
-    border-radius: 10px;
-    margin: 4px;
-    height: 100vh;
+    @apply text-3xl;
   }
 }
