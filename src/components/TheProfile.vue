@@ -3,8 +3,8 @@
     <UIContainer
       v-motion
       :initial="fadeInBottom.initial"
-      :visible-once="fadeInBottom.visibleOnce"
-      class="py-12 grid min-h-min items-center"
+      :visible-once="fadeInBottom.enter"
+      class="py-12 grid min-h-min items-center max-w-fit "
     >
       <div class="flex flex-wrap items-center gap-12">
         <div class="shrink grow basis-1/3">
@@ -23,7 +23,7 @@
             also find me on Github and LinkedIn.
           </p>
         </div>
-        <div class="profile-skills bg-gb-dk-purple px-12 py-8">
+        <div class="profile-skills bg-gb-dk-purple px-8 py-8">
           <div v-for="skills in skillLists" :key="skills.title">
             <h3 class="mb-6">{{ skills.title }}</h3>
             <ul class="mb-8 flex gap-4">
@@ -47,20 +47,20 @@
 
 <script setup>
 import UIContainer from "@/components/UI/UIContainer.vue";
-import { fadeInBottom } from "@/utils/useAnimation.js";
+import { fadeInBottom } from "@/utils/animations.js";
 
 const skillLists = [
   {
     title: "Languages",
-    items: ["HTML5", "CSS3 (SCSS)", "JavaScript (ES6)", "PHP", "MYSQL"],
+    items: ["JavaScript", "CSS/SCSS",  "PHP", "SQL"],
   },
   {
     title: "Frameworks",
-    items: ["Vue", "React", "Node", "Vitest", "WebFlow", "Shopify"],
+    items: ["Vue", "React", "WebFlow", "Shopify"],
   },
   {
     title: "Tools",
-    items: ["Gitub", "Adobe Suite", "Jira", "Slack", "GSAP"],
+    items: ["Gitub", "Adobe Suite", "Jira", "Slack"],
   },
 ];
 </script>
@@ -70,3 +70,4 @@ ul > * {
   white-space: nowrap;
 }
 </style>
+@/utils/animation.js

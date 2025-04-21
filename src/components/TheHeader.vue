@@ -10,15 +10,15 @@ import UIContainer from "@/components/UI/UIContainer.vue";
     <UIContainer
       class="relative -mt-20 mb-20 grid grid-cols-2 h-screen min-h-min items-center"
     >
-      <header>
-        <h1>Gavin Brown</h1>
-        <h2 class="mb-8">Front-end Developer</h2>
-        <p class="mb-12 text-xl">
+      <header class="w-full min-w-min py-24 col-start-1 row-start-1 col-span-2 sm:col-span-1 text-center sm:text-left justify-center sm:justify-start">
+        <h1 class="text-[3.5rem] lg:text-5xl">Gavin Brown</h1>
+        <h2 class="mb-8">Frontend Developer</h2>
+        <p class="mb-12">
           Creating web interfaces to make your digital experiences smooth and
           some more words here.
         </p>
 
-        <div class="flex gap-8">
+        <div class="flex flex-wrap sm:flex-nowrap  gap-8 justify-center sm:justify-start">
           <RouterLink to="/about">
             <UIButtonAnim>About</UIButtonAnim>
           </RouterLink>
@@ -28,7 +28,7 @@ import UIContainer from "@/components/UI/UIContainer.vue";
         </div>
       </header>
 
-      <div class="relative -z-1 flex h-2/3 w-full items-center">
+      <div class="col-start-1 row-start-1 col-span-2 sm:col-start-2 sm:col-start-2 justify-self-end h-2/3 w-2/3 sm:w-full relative -z-1 flex items-center">
         <UIShape />
       </div>
     </UIContainer>
