@@ -7,9 +7,9 @@ export const fadeInBottom = {
   },
 };
 export const fadeInTop = {
-  initial: { y: '-100%', opacity: 0 },
+  initial: { y: "-100%", opacity: 0 },
   enter: {
-    y: '0%',
+    y: "0%",
     opacity: 1,
     transition: { duration: 700, ease: "easeOut" },
   },

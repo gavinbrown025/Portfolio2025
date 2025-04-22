@@ -19,7 +19,7 @@ import { mainLoader } from "@/utils/animations.js";
     <TheNav class="relative z-10" />
     <TheHeader class="min-h-screen" />
     <TheProfile id="profile"/>
-    <TheProjects id="work" />
+    <TheProjects id="experience" />
     <TheContact id="contact" />
   </main>
 </template>

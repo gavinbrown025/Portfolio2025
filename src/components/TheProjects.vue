@@ -8,7 +8,7 @@
       >
         <div class="flex flex-wrap items-center gap-12">
           <!-- :class="{ 'flex-row-reverse': i % 2 === 1 }" -->
-          <div class="shrink grow basis-1/3 space-y-16">
+          <div class="min-w-[16rem] shrink grow basis-1/3 space-y-16">
             <h2 class="mb-8">{{ project.title }}</h2>
             <p>{{ project.description }}</p>
             <div class="flex gap-8">
@@ -41,7 +41,7 @@ const projects = reactive([
     title: "Miramonte Homes",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem et labore voluptates quas soluta nemo magni culpa nobis id. Facere atque quas alias totam, neque magni obcaecati officia libero.",
-    images: ["MiramonteMockup.png"],
+    images: ["MiramonteMockup.png", "spotifyMockup.png"],
     link: "https://example.com/project1",
   },
   {

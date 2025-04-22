@@ -29,9 +29,9 @@
           @click="isOpen = false"
           @keydown.enter="isOpen = false"
           >
-          <a class="block text-right px-4 py-2" :href="link.to">{{
+          <RouterLink class="block text-right px-4 py-2" :to="link.to">{{
             link.name
-          }}</a>
+          }}</RouterLink>
         </li>
       </ul>
     </nav>
@@ -54,8 +54,8 @@ const isLarge = useBreakpoints(breakpointsTailwind).greaterOrEqual("sm");
 watch(isLarge, (nv) => nv && (isOpen.value = false));
 
 const links = [
-  { name: "Work", to: "#work" },
   { name: "Profile", to: "#profile" },
+  { name: "Experience", to: "#experience" },
   { name: "Contact", to: "#contact" },
 ];
 </script>
