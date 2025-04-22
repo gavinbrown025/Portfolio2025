@@ -4,7 +4,7 @@
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
-      class="pt-12 pb-48 grid min-h-min items-center max-w-fit "
+      class="pt-12 pb-48 grid min-h-min items-center"
     >
       <div class="flex flex-wrap items-center gap-12">
         <div class="shrink grow basis-1/3">
@@ -23,7 +23,7 @@
             also find me on Github and LinkedIn.
           </p>
         </div>
-        <div class="profile-skills bg-gb-dk-purple px-8 py-8">
+        <div class="grow bg-gb-dk-purple px-8 py-8 sm:px-12">
           <div v-for="skills in skillLists" :key="skills.title">
             <h3 class="mb-6">{{ skills.title }}</h3>
             <ul class="mb-8 flex gap-4">
@@ -52,7 +52,7 @@ import { fadeInBottom } from "@/utils/animations.js";
 const skillLists = [
   {
     title: "Languages",
-    items: ["JavaScript", "CSS/SCSS",  "PHP", "SQL"],
+    items: ["JavaScript", "CSS/SCSS", "PHP", "SQL"],
   },
   {
     title: "Frameworks",

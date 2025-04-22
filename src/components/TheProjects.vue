@@ -20,7 +20,7 @@
               </a>
             </div>
           </div>
-          <ProjectImages class="min-w-[16rem]" :images="project.images" />
+          <ProjectImages :images="project.images" />
         </div>
       </UIContainer>
     </section>
@@ -41,7 +41,7 @@ const projects = reactive([
     title: "Miramonte Homes",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem et labore voluptates quas soluta nemo magni culpa nobis id. Facere atque quas alias totam, neque magni obcaecati officia libero.",
-    images: ["MiramonteMockup.png"],
+    images: ["MiramonteMockup.png", "spotifyMockup.png"],
     link: "https://example.com/project1",
   },
   {

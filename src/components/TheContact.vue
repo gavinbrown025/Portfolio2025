@@ -23,7 +23,7 @@
         </div>
       </form>
     </UIContainer>
-    <div class="sm:basis-1/2"></div>
+    <!-- <CloudAnim /> -->
   </section>
 </template>
 
@@ -34,6 +34,7 @@ import { reactive, ref } from "vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIInput from "@/components/UI/UIInput.vue";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
+import CloudAnim from "@/components/CloudAnim.vue";
 
 const inputs = [
   { name: "name", type: "text", label: "Your Name" },
