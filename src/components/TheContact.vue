@@ -50,7 +50,7 @@ const emailInvalid = ref(false);
 
 const sendMail = async (e) => {
   const mailProps = [
-    "service_qpr4sif",
+    "service_56hby5m",
     "template_y6h7do2",
     e.target,
     "user_dndU3EyPpAw3SMgd88loo",

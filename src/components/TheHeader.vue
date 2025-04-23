@@ -19,7 +19,7 @@ import UIContainer from "@/components/UI/UIContainer.vue";
         </p>
 
         <div class="flex flex-wrap sm:flex-nowrap  gap-8 justify-center sm:justify-start">
-          <RouterLink to="/about">
+          <RouterLink to="#experience">
             <UIButtonAnim>Experience</UIButtonAnim>
           </RouterLink>
           <UIButtonAnim>
