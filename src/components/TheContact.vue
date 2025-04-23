@@ -1,11 +1,11 @@
 <template>
   <section class="flex flex-wrap">
-    <UIContainer class="sm:basis-1/2">
+    <UIContainer class="flex justify-center">
       <form
         @submit.prevent="sendMail"
         id="contact-form"
         method="post"
-        class="space-y-8"
+        class="space-y-8 sm:basis-1/2 grow shrink max-w-[48rem]"
       >
         <h2>What can I do for you?</h2>
         <div v-for="{ name, type, label } in inputs" :key="name">

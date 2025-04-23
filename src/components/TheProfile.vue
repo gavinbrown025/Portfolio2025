@@ -23,7 +23,7 @@
             also find me on Github and LinkedIn.
           </p>
         </div>
-        <div class="grow bg-gb-dk-purple px-8 py-8 sm:px-12">
+        <div class="grow sm:bg-gb-dk-purple p-0 sm:py-8 sm:px-12">
           <div v-for="skills in skillLists" :key="skills.title">
             <h3 class="mb-6">{{ skills.title }}</h3>
             <ul class="mb-8 flex gap-4">
