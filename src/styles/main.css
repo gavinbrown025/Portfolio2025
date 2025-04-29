@@ -39,6 +39,14 @@
   );
 }
 
+@utility activeButton {
+  @apply bg-gb-lt-purple;
+}
+@utility activeLines {
+  @apply !translate-y-0 ;
+  width: calc(100% - 2rem) !important;
+}
+
 @layer base {
   *,
   *::before,

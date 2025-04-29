@@ -2,11 +2,11 @@
 import TheNav from "@/components/TheNav.vue";
 import TheHeader from "@/components/TheHeader.vue";
 import TheProfile from "@/components/TheProfile.vue";
-import TheProjects from "@/components/TheProjects.vue";
+import WorkExperience from "@/components/WorkExperience.vue";
+import TheEducation from "@/components/TheEducation.vue";
 import TheContact from "@/components/TheContact.vue";
 
 import { mainLoader } from "@/utils/animations.js";
-
 </script>
 
 <template>
@@ -18,9 +18,11 @@ import { mainLoader } from "@/utils/animations.js";
   >
     <TheNav class="relative z-10" />
     <TheHeader class="min-h-screen" />
-    <TheProfile id="profile"/>
-    <TheProjects id="experience" />
+    <TheProfile id="profile" />
+    <WorkExperience id="experience" />
+    <TheEducation id="education" />
     <TheContact id="contact" />
+    <div id="footer" class="h-80 bg-gb-dk-purple"></div>
   </main>
 </template>
-@/utils/animation.js
+

@@ -1,6 +1,11 @@
 <template>
   <section class="flex flex-wrap">
-    <UIContainer class="flex justify-center">
+    <UIContainer
+      v-motion
+      :initial="fadeInBottom.initial"
+      :visible-once="fadeInBottom.enter"
+      class="flex justify-center"
+    >
       <form
         @submit.prevent="sendMail"
         id="contact-form"
@@ -34,7 +39,7 @@ import { reactive, ref } from "vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIInput from "@/components/UI/UIInput.vue";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
-import CloudAnim from "@/components/CloudAnim.vue";
+import { fadeInBottom } from "@/utils/animations.js";
 
 const inputs = [
   { name: "name", type: "text", label: "Your Name" },

@@ -16,7 +16,7 @@
             interfaces that bring the capabilities of the web to your
             fingertips. <br />
             <br />
-            While I spend most of my time with User Interfaces, but I also enjoy
+            While I spend most of my time with User Interfaces, I also enjoy
             getting involved in design, and back-end development. <br />
             <br />
             Browse some of my work, view my skills, or get in touch. You can
