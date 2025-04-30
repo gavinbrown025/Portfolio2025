@@ -1,3 +1,5 @@
+import { ref, computed } from "vue";
+
 export const projects = {
   AdRetriever: {
     title: "AdRetriever",
@@ -10,7 +12,7 @@ export const projects = {
   },
   "Twenty Eighty": {
     title: "Twenty Eighty",
-    company: "Catch",
+    company: "Catch Digital",
     category: "workExp",
     description:
       "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance. During my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand. The site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services. I worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
@@ -53,32 +55,32 @@ export const projects = {
   },
 };
 
-export const workExp = [
-  {
-    title: "Intermediate Frontend Developer",
+export const workExp = {
+  KnowerTech: {
     company: "KnowerTech",
+    title: "Intermediate Frontend Developer",
     date: "2022 - 2025",
     description:
       "At KnowerTech, I worked as a Frontend Developer on AdRetriever — a web application designed to generate ads and custom templates at scale, based on users' websites, services, and products. I collaborated with a team of developers to build responsive, accessible interfaces and focused on delivering a seamless user experience. My responsibilities included designing and implementing new features, optimizing UI components, and continuously improving the application’s usability.",
     projects: ["AdRetriever"],
   },
-  {
-    title: "Web Developer",
+  "Catch Digital": {
     company: "Catch Digital",
+    title: "Web Developer",
     date: "2021 - 2022",
     description:
       "At Catch Digital, I was responsible for developing client websites using Webflow — a no-code platform that enables easy content management while allowing for highly customizable and visually distinct designs. I collaborated closely with designers and project managers to ensure each website aligned with client goals and was delivered on schedule. In addition to new builds, I provided ongoing support and maintenance for existing sites, ensuring they remained up-to-date and fully functional.",
     projects: ["Twenty Eighty"],
   },
-  {
-    title: "Web Developer",
+  FreeLance: {
     company: "FreeLance",
+    title: "Web Developer",
     date: "2020 - Present",
     description:
       "At Catch Digital, I was responsible for developing client websites using Webflow — a no-code platform that enables easy content management while allowing for highly customizable and visually distinct designs. I collaborated closely with designers and project managers to ensure each website aligned with client goals and was delivered on schedule. In addition to new builds, I provided ongoing support and maintenance for existing sites, ensuring they remained up-to-date and fully functional.",
     projects: ["WasteWaterPro"],
   },
-];
+};
 
 export const education = {
   title: "Interactive Media Development",
@@ -89,3 +91,6 @@ export const education = {
 };
 
 export const devExp = ["MineSweeper", "Weather App", "Spotify Clone"];
+
+export const selectedExp = ref("KnowerTech");
+export const currentExp = computed(() => workExp[selectedExp.value]);

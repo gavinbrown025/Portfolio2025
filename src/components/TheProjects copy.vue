@@ -35,4 +35,8 @@ import ProjectImages from "@/components/ProjectImages.vue";
 import { fadeInBottom } from "@/utils/animations.js";
 
 import { projects } from "@/utils/useProjects.js";
+
+const props = defineProps({
+  project: { type: Array, default: () => projects["AdRetriever"] },
+});
 </script>

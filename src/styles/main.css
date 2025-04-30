@@ -39,12 +39,11 @@
   );
 }
 
-@utility activeButton {
+@utility btn-active {
   @apply bg-gb-lt-purple;
 }
-@utility activeLines {
-  @apply !translate-y-0 ;
-  width: calc(100% - 2rem) !important;
+@utility lines-active {
+  @apply !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)]  ;
 }
 
 @layer base {
@@ -112,8 +111,7 @@
   }
 
   section {
-    min-height: 100vh;
-    width: 100%;
+    @apply w-full py-24 md:py-36 lg:py-48;
   }
 
   ul,

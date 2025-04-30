@@ -6,9 +6,9 @@ import UIContainer from "@/components/UI/UIContainer.vue";
 </script>
 
 <template>
-  <section>
+  <section class="-mt-20 py-0 grid place-items-center">
     <UIContainer
-      class="relative -mt-20 mb-20 grid grid-cols-2 h-screen min-h-min items-center"
+      class="relative grid grid-cols-2 h-full items-center"
     >
       <header
         class="w-full min-w-min py-24 col-start-1 row-start-1 col-span-2 sm:col-span-1 text-center sm:text-left justify-center sm:justify-start"
