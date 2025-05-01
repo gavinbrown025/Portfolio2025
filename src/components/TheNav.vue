@@ -1,5 +1,5 @@
 <template>
-  <UIContainer class="!px-0">
+  <UIContainer class="sticky top-0 !px-0">
     <nav
       class="flex justify-between px-8 py-4 sm:bg-transparent"
       :class="isOpen ? 'bg-gb-dk-purple' : ''"
@@ -54,8 +54,8 @@ const isLarge = useBreakpoints(breakpointsTailwind).greaterOrEqual("sm");
 watch(isLarge, (nv) => nv && (isOpen.value = false));
 
 const links = [
-  { name: "Profile", to: "#profile" },
-  { name: "Experience", to: "#experience" },
-  { name: "Contact", to: "#contact" },
+  { name: "Profile", to: "/#profile" },
+  { name: "Experience", to: "/#experience" },
+  { name: "Contact", to: "/#contact" },
 ];
 </script>

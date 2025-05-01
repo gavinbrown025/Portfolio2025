@@ -1,24 +1,20 @@
 <template>
-  <button>
-    <div class="lines"></div>
+  <button class="btn group" :class="{ 'btn-active': active }">
+    <div class="lines" :class="{ 'lines-active': active }" />
     <slot></slot>
   </button>
 </template>
 
+<script setup>
+defineProps({ active: { type: Boolean, default: false } });
+</script>
+
 <style scoped>
 @reference "@/styles/main.css";
-button {
-  @apply relative cursor-pointer flex min-w-[8rem] sm:min-w-[12rem] items-center justify-center border px-4 py-3 font-light uppercase transition;
-  .lines {
-    @apply absolute left-4 h-8 w-4 -translate-y-full border-l border-r transition-all duration-500;
-  }
-  &:hover {
-    @apply bg-gb-lt-purple text-black;
-    .lines {
-      @apply -translate-y-0;
-      border-color: black;
-      width: calc(100% - 2rem);
-    }
-  }
+.btn {
+  @apply relative cursor-pointer min-w-[8rem] sm:min-w-[12rem] grid place-items-center border px-4 py-3 uppercase leading-none transition hover:btn-active;
+}
+.lines {
+  @apply group-hover:lines-active h-[calc(100%-1.25rem)] w-4 absolute left-3 sm:left-4 -translate-y-full border-l border-r transition-all duration-500;
 }
 </style>

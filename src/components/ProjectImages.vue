@@ -1,9 +1,19 @@
 <template>
-  <div class="min-w-[24rem] flex items-center basis-1/2 grow py-8">
-    <UIIcon icon="arrow_back_ios" class="cursor-pointer" @click="prevImage" />
+  <div class="sm:min-w-[24rem] flex items-center basis-1/2 grow sm:py-8">
+    <div
+      class="grid place-items-center cursor-pointer h-24 p-1 hover:bg-gb-lt-purple/20"
+      @click="prevImage"
+    >
+      <UIIcon
+        v-if="projectImages.length > 1"
+        icon="arrow_back_ios"
+        class="-mr-2"
+        @click="prevImage"
+      />
+    </div>
 
     <div
-      class="relative w-full overflow-hidden contain-content h-90"
+      class="relative w-full overflow-hidden contain-content h-80 sm:h-100"
       :style="transitionStyle"
     >
       <Transition name="slide" mode="out-in">
@@ -16,11 +26,17 @@
       </Transition>
     </div>
 
-    <UIIcon
-      icon="arrow_forward_ios"
-      class="cursor-pointer"
+    <div
+      class="rotate-180 grid place-items-center cursor-pointer h-24 p-1 hover:bg-gb-lt-purple/20"
       @click="nextImage"
-    />
+    >
+      <UIIcon
+        v-if="projectImages.length > 1"
+        icon="arrow_back_ios"
+        class="-mr-2"
+        @click="nextImage"
+      />
+    </div>
   </div>
 </template>
 

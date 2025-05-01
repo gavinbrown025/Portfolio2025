@@ -1,10 +1,10 @@
 <template>
-  <section class="min-h-screen">
+  <section>
     <UIContainer
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
-      class="pt-12 pb-48 grid min-h-min items-center"
+      class="grid min-h-min items-center"
     >
       <div class="flex flex-wrap items-center gap-12">
         <div class="shrink grow basis-1/3">
@@ -16,14 +16,14 @@
             interfaces that bring the capabilities of the web to your
             fingertips. <br />
             <br />
-            While I spend most of my time with User Interfaces, but I also enjoy
+            While I spend most of my time with User Interfaces, I also enjoy
             getting involved in design, and back-end development. <br />
             <br />
             Browse some of my work, view my skills, or get in touch. You can
             also find me on Github and LinkedIn.
           </p>
         </div>
-        <div class="grow bg-gb-dk-purple px-8 py-8 sm:px-12">
+        <div class="grow bg-gb-dk-purple p-6 sm:py-8 sm:px-12">
           <div v-for="skills in skillLists" :key="skills.title">
             <h3 class="mb-6">{{ skills.title }}</h3>
             <ul class="mb-8 flex gap-4">

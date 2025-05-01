@@ -1,11 +1,16 @@
 <template>
   <section class="flex flex-wrap">
-    <UIContainer class="sm:basis-1/2">
+    <UIContainer
+      v-motion
+      :initial="fadeInBottom.initial"
+      :visible-once="fadeInBottom.enter"
+      class="flex justify-center"
+    >
       <form
         @submit.prevent="sendMail"
         id="contact-form"
         method="post"
-        class="space-y-8"
+        class="space-y-8 sm:basis-1/2 grow shrink max-w-[48rem]"
       >
         <h2>What can I do for you?</h2>
         <div v-for="{ name, type, label } in inputs" :key="name">
@@ -34,7 +39,7 @@ import { reactive, ref } from "vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIInput from "@/components/UI/UIInput.vue";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
-import CloudAnim from "@/components/CloudAnim.vue";
+import { fadeInBottom } from "@/utils/animations.js";
 
 const inputs = [
   { name: "name", type: "text", label: "Your Name" },
@@ -50,7 +55,7 @@ const emailInvalid = ref(false);
 
 const sendMail = async (e) => {
   const mailProps = [
-    "service_qpr4sif",
+    "service_56hby5m",
     "template_y6h7do2",
     e.target,
     "user_dndU3EyPpAw3SMgd88loo",
