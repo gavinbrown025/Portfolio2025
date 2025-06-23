@@ -16,7 +16,7 @@ export const projects = {
     category: "workExp",
     description:
       "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance. During my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand. The site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services. I worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
-    images: ["ParrotMockup.png"],
+    images: ["TwentyEightyMockup.png"],
     link: "https://www.twentyeighty.co/",
   },
   // {
@@ -77,7 +77,7 @@ export const workExp = {
     title: "Web Developer",
     date: "2020 - Present",
     description:
-      "At Catch Digital, I was responsible for developing client websites using Webflow — a no-code platform that enables easy content management while allowing for highly customizable and visually distinct designs. I collaborated closely with designers and project managers to ensure each website aligned with client goals and was delivered on schedule. In addition to new builds, I provided ongoing support and maintenance for existing sites, ensuring they remained up-to-date and fully functional.",
+      "As a freelance developer, I worked directly with clients to design and build custom web applications tailored to their business needs. Using modern tools like Vue.js and Django, I created intuitive, responsive interfaces and robust backends that delivered seamless user experiences. I managed projects end-to-end — from gathering requirements and defining scope to deployment and post-launch support — while maintaining clear communication and timely delivery. In addition to new builds, I provided ongoing maintenance, feature enhancements, and performance optimizations to ensure long-term value for clients.",
     projects: ["WasteWaterPro"],
   },
 };
