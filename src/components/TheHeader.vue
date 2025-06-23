@@ -3,21 +3,19 @@ import { RouterLink } from "vue-router";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
 import UIShape from "@/components/UI/UIShape.vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
+import ResumeButton from "@/components/ResumeButton.vue";
 </script>
 
 <template>
   <section class="-mt-20 py-0 grid place-items-center">
-    <UIContainer
-      class="relative grid grid-cols-2 h-full items-center"
-    >
+    <UIContainer class="relative grid grid-cols-2 h-full items-center">
       <header
         class="w-full min-w-min py-24 col-start-1 row-start-1 col-span-2 sm:col-span-1 text-center sm:text-left justify-center sm:justify-start"
       >
         <h1 class="text-[3.5rem] lg:text-5xl">Gavin Brown</h1>
         <h2 class="mb-8">Frontend Developer</h2>
         <p class="mb-16">
-          Creating web interfaces to make your digital experiences smooth and
-          some more words here.
+          Creating web interfaces to make digital experiences smooth and simple.
         </p>
 
         <div
@@ -26,9 +24,7 @@ import UIContainer from "@/components/UI/UIContainer.vue";
           <RouterLink to="#experience">
             <UIButtonAnim>Experience</UIButtonAnim>
           </RouterLink>
-          <RouterLink to="/">
-            <UIButtonAnim> Resume </UIButtonAnim>
-          </RouterLink>
+          <ResumeButton>Download Resume</ResumeButton>
         </div>
       </header>
 
