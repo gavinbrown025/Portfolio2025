@@ -6,7 +6,7 @@
 
 <script setup>
 import UIButtonAnim from './UI/UIButtonAnim.vue';
-import resumePdf from '../assets/Gavin_Brown_Resume_2025.pdf';
+import resumePdf from '@/assets/Gavin_Brown_Resume_2025.pdf';
 
 const downloadResume = () => {
   const link = document.createElement('a');
