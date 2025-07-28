@@ -14,7 +14,7 @@ import ResumeButton from "@/components/ResumeButton.vue";
       >
         <h1 class="text-[3.5rem] lg:text-5xl">Gavin Brown</h1>
         <h2 class="mb-8">Frontend Developer</h2>
-        <p class="mb-16">
+        <p class="mb-16 text-lg">
           Creating web interfaces to make digital experiences smooth and simple.
         </p>
 
@@ -29,7 +29,7 @@ import ResumeButton from "@/components/ResumeButton.vue";
       </header>
 
       <div
-        class="col-start-1 row-start-1 col-span-2 sm:col-start-2 sm:col-start-2 justify-self-end h-2/3 w-full relative -z-1 flex items-center"
+        class="col-start-1 row-start-1 col-span-2 sm:col-start-2 justify-self-end h-2/3 w-full relative -z-1 flex items-center"
       >
         <UIShape />
       </div>

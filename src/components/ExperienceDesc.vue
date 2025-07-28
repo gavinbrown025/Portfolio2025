@@ -12,8 +12,8 @@
       <UIButtonAnim
         v-for="exp in workExp"
         :key="exp.company"
-        :active="selectedExp === exp.company"
-        @click="selectedExp = exp.company"
+        :active="selectedWork === exp.company"
+        @click="selectedWork = exp.company"
       >
         {{ exp.company }}
       </UIButtonAnim>
@@ -23,5 +23,5 @@
 
 <script setup>
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
-import { workExp, selectedExp } from "@/utils/useProjects.js";
+import { workExp, selectedWork } from "@/utils/useProjects.js";
 </script>

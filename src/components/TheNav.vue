@@ -18,7 +18,7 @@
         :class="[
           // 'flex basis-1/2 items-center justify-end border-b text-lg',
           'absolute w-full min-h-min top-5/6 left-0 text-lg bg-gb-dk-purple border-b',
-          'sm:relative sm:basis-1/2 sm:flex sm:justify-end sm:basis-1/2 sm:items-center sm:bg-transparent',
+          'sm:relative sm:flex sm:justify-end sm:basis-1/2 sm:items-center sm:bg-transparent',
           isOpen ? '' : 'hidden',
         ]"
       >
