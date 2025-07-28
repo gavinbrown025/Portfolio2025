@@ -33,11 +33,11 @@ import ProjectImages from "@/components/ProjectImages.vue";
 
 import { fadeInBottom } from "@/utils/animations.js";
 
-import { projects, selectedExp } from "@/utils/useProjects.js";
+import { projects, selectedWork } from "@/utils/useProjects.js";
 
 const props = defineProps({
   project: { type: Object, default: () => projects["AdRetriever"] },
 });
 
-selectedExp.value = props.project.company;
+// selectedWork.value = props.project.company;
 </script>
