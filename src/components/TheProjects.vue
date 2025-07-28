@@ -10,7 +10,7 @@
         <div class="min-w-[16rem] shrink grow basis-1/3 space-y-16">
           <h2 class="mb-2">{{ project.title }}</h2>
           <h3 class="mb-8">{{ project.company }}</h3>
-          <p>{{ project.description }}</p>
+          <UIMultiParagraph :text="project.description" class="mb-12"/>
           <div class="flex gap-8">
             <a :href="project.link" target="_blank">
               <UIButtonAnim>Visit Site</UIButtonAnim>
@@ -29,6 +29,7 @@
 <script setup>
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
+import UIMultiParagraph from "@/components/UI/UIMultiParagraph.vue";
 import ProjectImages from "@/components/ProjectImages.vue";
 
 import { fadeInBottom } from "@/utils/animations.js";
