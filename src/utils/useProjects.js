@@ -36,6 +36,14 @@ export const projects = {
     images: ["MineSweeperMockup.png"],
     link: "https://main.d2idek4o563rm4.amplifyapp.com/",
   },
+  "Expense Tracker": {
+    title: "Expense Tracker",
+    category: "devExp",
+    description:
+      "This is a custom-built expense tracker application developed using Next.js.\n\nThe application features user authentication, data visualization, and integration with Prisma and Neon APIs and Databases.\n\nThe most challenging part of the implementation was ensuring data consistency and accuracy across different views and components.\n\nThis required building a robust state management solution and implementing thorough testing strategies to catch and fix bugs early.\n\nThe application showcases Reacts's reactivity and component structure, providing a smooth and dynamic user experience.",
+    images: ["ExpenseTrackerMockup.png"],
+    link: "https://expense-tracker-4y8u.vercel.app/",
+  },
 };
 
 export const workExp = {
@@ -77,6 +85,13 @@ export const education = {
 };
 
 export const devExp = {
+  "Expense Tracker": {
+    company: "Expense Tracker",
+    title: "Expense Tracker With Ai Utility",
+    description:
+      "A customizable React-based expense tracker application that utilizes AI for smart categorization, expense analysis and suggestions.\n\nFeatures include user authentication, data visualization, and integration with Vercel Deployment, Prisma Databases, and Neon APIs.",
+    projects: ["Expense Tracker"],
+  },
   "Boom Broom": {
     company: "Boom Broom",
     title: "Custom Minesweeper Game",
@@ -86,5 +101,5 @@ export const devExp = {
   },
 };
 
-export const selectedDev = ref("Boom Broom");
+export const selectedDev = ref("Expense Tracker");
 export const currentDev = computed(() => devExp[selectedDev.value]);
