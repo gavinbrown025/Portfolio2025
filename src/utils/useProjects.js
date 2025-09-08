@@ -42,7 +42,7 @@ export const projects = {
     description:
       "This is a custom-built expense tracker application developed using Next.js.\n\nThe application features user authentication, data visualization, and integration with Prisma and Neon APIs and Databases.\n\nThe most challenging part of the implementation was ensuring data consistency and accuracy across different views and components.\n\nThis required building a robust state management solution and implementing thorough testing strategies to catch and fix bugs early.\n\nThe application showcases Reacts's reactivity and component structure, providing a smooth and dynamic user experience.",
     images: ["ExpenseTrackerMockup.png"],
-    link: "https://main.d2idek4o563rm4.amplifyapp.com/",
+    link: "https://expense-tracker-4y8u.vercel.app/",
   },
 };
 
