@@ -18,7 +18,6 @@ import { currentWork } from "@/utils/useProjects.js";
 
 import UIContainer from "@/components/UI/UIContainer.vue";
 import ExperienceDesc from "@/components/ExperienceDesc.vue";
-import EducationDesc from "@/components/EducationDesc.vue";
 import WorkDesc from "@/components/WorkDesc.vue";
 
 

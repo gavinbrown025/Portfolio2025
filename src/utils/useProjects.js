@@ -8,6 +8,7 @@ export const projects = {
     description:
       "AdRetriever is a web-based platform built to help businesses streamline the creation, management, and analysis of digital advertising campaigns.\n\nUsing AI and Machine Learning, it ingests company-specific data—such as product listings and brand guidelines—to automatically generate ad creatives tailored to target demographics.\n\nI worked on developing and maintaining key features including: dynamic ad generation using brand-aligned, editable templates; campaign performance tracking with real-time analytics and insights; and integration with external APIs and internal ML services to personalize ad content based on user behavior and product data.\n\nThe app was built with a focus on scalability, ease of use, and automation—reducing the time and expertise required to launch effective ad campaigns.",
     images: ["AdRetrieverMockup.png"],
+    videos: [],
     link: "https://adretriever.com",
   },
   "Twenty Eighty": {
@@ -17,6 +18,7 @@ export const projects = {
     description:
       "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance.\n\nDuring my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand.\n\nThe site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services.\n\nI worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
     images: ["TwentyEightyMockup.png"],
+    videos: [],
     link: "https://www.twentyeighty.co/",
   },
   WasteWaterPro: {
@@ -26,6 +28,7 @@ export const projects = {
     description:
       "WasteWaterPro is an industrial and municipal wastewater treatment company specializing in tailored, modern solutions, including container-based mobile dewatering systems.\n\nAs a freelance developer, I designed and built their website to effectively communicate their expertise and plug-and-play product offerings.\n\nThe site highlights key services, features technical product overviews, and supports lead generation through clear CTAs and contact forms.\n\nBuilt with a focus on clarity and professionalism, the website delivers a clean, responsive experience for both desktop and mobile users.",
     images: ["WasteWaterMockup.png"],
+    videos: [],
     link: "https://www.wastewaterpro.ca/",
   },
   "Boom Broom": {
@@ -34,6 +37,7 @@ export const projects = {
     description:
       "This is a custom-built Minesweeper game developed using Vue.js.\n\nThe game features customizable grid size and difficulty levels, allowing users to adjust the number of rows, columns, and bombs to their preference.\n\nThe most challenging part of the implementation was replicating the classic Minesweeper behavior of automatically revealing connected empty squares when one is clicked.\n\nThis required building a recursive (or queue-based) logic to flood-fill all adjacent blank cells and accurately calculate and display the number of neighboring bombs for each tile.\n\nThe game showcases Vue's reactivity and component structure, providing a smooth and dynamic gameplay experience.",
     images: ["MineSweeperMockup.png"],
+    videos: [],
     link: "https://main.d2idek4o563rm4.amplifyapp.com/",
   },
   "Expense Tracker": {
@@ -42,6 +46,7 @@ export const projects = {
     description:
       "This is a custom-built expense tracker application developed using Next.js.\n\nThe application features user authentication, data visualization, and integration with Prisma and Neon APIs and Databases.\n\nThe most challenging part of the implementation was ensuring data consistency and accuracy across different views and components.\n\nThis required building a robust state management solution and implementing thorough testing strategies to catch and fix bugs early.\n\nThe application showcases Reacts's reactivity and component structure, providing a smooth and dynamic user experience.",
     images: ["ExpenseTrackerMockup.png"],
+    videos: ["ExpenseTrackerVid.webm"],
     link: "https://expense-tracker-4y8u.vercel.app/",
   },
 };

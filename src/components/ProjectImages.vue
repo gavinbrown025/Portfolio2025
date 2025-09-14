@@ -1,40 +1,40 @@
 <template>
-  <div class="sm:min-w-[24rem] flex items-center basis-1/2 grow sm:py-8">
+  <div class="basis-1/2 sm:min-w-[40rem] aspect-3/2 grow grid grid-cols-[auto_1fr_auto] place-items-center sm:py-8">
     <div
-      class="grid place-items-center cursor-pointer h-24 p-1 hover:bg-gb-lt-purple/20"
+      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-gb-lt-purple/20"
       @click="prevImage"
     >
       <UIIcon
-        v-if="projectImages.length > 1"
+        v-if="projectMedia.length > 1"
         icon="arrow_back_ios"
         class="-mr-2"
-        @click="prevImage"
       />
     </div>
 
     <div
-      class="relative w-full overflow-hidden contain-content h-80 sm:h-100"
+      class="relative size-full overflow-hidden"
       :style="transitionStyle"
     >
       <Transition name="slide" mode="out-in">
-        <img
+        <component
           :key="currentIndex"
-          :src="currentImage"
+          :is="currentMedia.type"
+          :src="currentMedia.src"
+          :controls="currentMedia.type === 'video'"
           alt="Project image"
-          class="absolute top-0 left-0 w-full h-full object-contain"
+          class="absolute top-0 left-0 size-full object-contain pointer-events-auto"
         />
       </Transition>
     </div>
 
     <div
-      class="rotate-180 grid place-items-center cursor-pointer h-24 p-1 hover:bg-gb-lt-purple/20"
+      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-gb-lt-purple/20"
       @click="nextImage"
     >
       <UIIcon
-        v-if="projectImages.length > 1"
-        icon="arrow_back_ios"
+        v-if="projectMedia.length > 1"
+        icon="arrow_forward_ios"
         class="-mr-2"
-        @click="nextImage"
       />
     </div>
   </div>
@@ -42,18 +42,32 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useProjectImages } from "@/utils/useProjectImages";
+import { useProjectImages, useProjectVideos } from "@/utils/useProjectImages";
 import UIIcon from "@/components/UI/UIIcon.vue";
 
-const props = defineProps({ images: { type: Array, required: true } });
+const props = defineProps({
+  images: { type: Array, required: true },
+  videos: { type: Array, default: () => [] },
+});
 
 const currentIndex = ref(0);
 
 const imageMap = useProjectImages();
-const projectImages = computed(() =>
-  props.images.map((image) => imageMap[image])
+const videoMap = useProjectVideos();
+
+const projectMedia = computed(() => {
+  const imgArr = Array.isArray(props.images)
+    ? props.images.map((image) => ({ type: "img", src: imageMap[image] }))
+    : [];
+  const vidArr = Array.isArray(props.videos)
+    ? props.videos.map((video) => ({ type: "video", src: videoMap[video] }))
+    : [];
+  return [...imgArr, ...vidArr];
+});
+
+const currentMedia = computed(
+  () => projectMedia.value[currentIndex.value] || {}
 );
-const currentImage = computed(() => projectImages.value[currentIndex.value]);
 
 const direction = ref("next");
 const transitionStyle = computed(() => ({
@@ -63,13 +77,14 @@ const transitionStyle = computed(() => ({
 
 function nextImage() {
   direction.value = "next";
-  currentIndex.value = (currentIndex.value + 1) % props.images.length;
+  currentIndex.value = (currentIndex.value + 1) % projectMedia.value.length;
 }
 
 function prevImage() {
   direction.value = "prev";
   currentIndex.value =
-    (currentIndex.value - 1 + props.images.length) % props.images.length;
+    (currentIndex.value - 1 + projectMedia.value.length) %
+    projectMedia.value.length;
 }
 </script>
 

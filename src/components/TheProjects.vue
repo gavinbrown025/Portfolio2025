@@ -20,7 +20,7 @@
             </a>
           </div>
         </div>
-        <ProjectImages :images="project.images" />
+        <ProjectImages :images="project.images" :videos="project.videos" />
       </div>
     </UIContainer>
   </section>
@@ -34,7 +34,7 @@ import ProjectImages from "@/components/ProjectImages.vue";
 
 import { fadeInBottom } from "@/utils/animations.js";
 
-import { projects, selectedWork } from "@/utils/useProjects.js";
+import { projects } from "@/utils/useProjects.js";
 
 const props = defineProps({
   project: { type: Object, default: () => projects["AdRetriever"] },

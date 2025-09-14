@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap");
 @import "tailwindcss";
+@plugin "daisyui";
 
 @theme {
   --color-gb-white: #f1f1f1;
@@ -28,6 +29,8 @@
   --radius-xl: 2em;
 }
 
+
+
 @utility bg-rad-grad {
   background-image: radial-gradient(circle, #1a1a30 50%, #141425 100%);
 }
@@ -42,8 +45,14 @@
 @utility btn-active {
   @apply bg-gb-lt-purple;
 }
+
+
 @utility lines-active {
   @apply !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)]  ;
+}
+
+@utility lines {
+  @apply h-[calc(100%-1.25rem)] w-4 absolute left-3 sm:left-4 -translate-y-full border-l border-r transition-all duration-500;
 }
 
 @layer base {
