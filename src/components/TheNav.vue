@@ -23,7 +23,7 @@
           isOpen ? '' : 'hidden',
         ]"
       >
-        <ProjectsDropdown :isNav="true" />
+        <ProjectsDropdown :isNav="true" @close="isOpen = false" />
         <li
           v-for="link in links"
           :key="link.to"
