@@ -5,6 +5,7 @@
       :class="isOpen ? 'bg-gb-dk-purple' : ''"
     >
       <UILogo />
+
       <button
         @click="isOpen = !isOpen"
         class="flex items-center sm:hidden text-3xl focus:outline-none cursor-pointer hover:bg-gb-lt-purple transition-background duration-300"
@@ -22,16 +23,17 @@
           isOpen ? '' : 'hidden',
         ]"
       >
+        <ProjectsDropdown :isNav="true" />
         <li
           v-for="link in links"
           :key="link.to"
           class="w-full sm:w-auto px-8 sm:px-0 text-lg sm:text-base hover:bg-gb-lt-purple transition-background duration-300"
           @click="isOpen = false"
           @keydown.enter="isOpen = false"
-          >
-          <RouterLink class="block text-right px-4 py-2" :to="link.to">{{
-            link.name
-          }}</RouterLink>
+        >
+          <RouterLink class="block px-4 py-2" :to="link.to">
+            {{ link.name }}
+          </RouterLink>
         </li>
       </ul>
     </nav>
@@ -47,6 +49,7 @@ import { fadeInTop } from "@/utils/animations.js";
 import UILogo from "@/components/UI/UILogo.vue";
 import UIIcon from "@/components/UI/UIIcon.vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
+import ProjectsDropdown from "@/components/ProjectsDropdown.vue";
 
 const isOpen = ref(false);
 
