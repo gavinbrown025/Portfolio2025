@@ -1,5 +1,5 @@
 <template>
-  <TheProjects :project />
+  <TheProjects :project :key="project" />
 </template>
 
 <script setup>

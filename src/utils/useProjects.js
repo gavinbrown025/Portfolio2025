@@ -18,7 +18,7 @@ export const projects = {
     description:
       "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance.\n\nDuring my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand.\n\nThe site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services.\n\nI worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
     images: ["TwentyEightyMockup.png"],
-    videos: [],
+    videos: ["TwentyEightyDemo.webm"],
     link: "https://www.twentyeighty.co/",
   },
   WasteWaterPro: {
@@ -46,7 +46,7 @@ export const projects = {
     description:
       "This is a custom-built expense tracker application developed using Next.js.\n\nThe application features user authentication, data visualization, and integration with Prisma and Neon APIs and Databases.\n\nThe most challenging part of the implementation was ensuring data consistency and accuracy across different views and components.\n\nThis required building a robust state management solution and implementing thorough testing strategies to catch and fix bugs early.\n\nThe application showcases Reacts's reactivity and component structure, providing a smooth and dynamic user experience.",
     images: ["ExpenseTrackerMockup.png"],
-    videos: ["ExpenseTrackerVid.webm"],
+    videos: ["ExpenseTrackerDemo.webm"],
     link: "https://expense-tracker-4y8u.vercel.app/",
   },
 };

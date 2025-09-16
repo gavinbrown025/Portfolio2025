@@ -46,6 +46,9 @@
   @apply bg-gb-lt-purple;
 }
 
+@utility btn-gb {
+  @apply relative cursor-pointer min-w-[8rem] sm:min-w-[12rem] grid place-items-center border px-4 py-3 uppercase leading-none transition hover:btn-active;
+}
 
 @utility lines-active {
   @apply !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)]  ;
