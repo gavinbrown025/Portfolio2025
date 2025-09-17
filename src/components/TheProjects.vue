@@ -7,12 +7,11 @@
     >
       <div class="flex flex-wrap items-center gap-12">
         <!-- :class="{ 'flex-row-reverse': i % 2 === 1 }" -->
-        <div class="min-w-[16rem] shrink grow basis-1/3 space-y-16">
-          <div class="flex items-center gap-8 ">
-            <h2 class="mb-2">{{ project.title }}</h2>
+        <div class="min-w-[16rem] shrink grow basis-1/3">
+          <div class="flex items-center gap-8">
+            <h2>{{ project.title }}</h2>
             <ProjectsDropdown class="grid place-items-center border-white border-2" buttonLabel="See More" />
           </div>
-
           <h3 class="mb-8">{{ project.company }}</h3>
           <UIMultiParagraph :text="project.description" class="mb-12" />
           <div class="flex gap-8">

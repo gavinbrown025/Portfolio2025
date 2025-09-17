@@ -13,9 +13,8 @@ import { mainLoader } from "@/utils/animations.js";
     class="relative"
   >
     <TheNav class="relative z-10" />
-    <RouterView />
+      <RouterView />
     <TheContact id="contact" />
     <div id="footer" class="h-12 bg-gb-dk-purple" />
   </main>
 </template>
-

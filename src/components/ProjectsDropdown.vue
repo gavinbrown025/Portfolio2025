@@ -1,7 +1,7 @@
 <template>
   <div>
     <li
-      class="dropdown dropdown-start hover:bg-gb-lt-purple transition-background duration-300 cursor-pointer"
+      class="dropdown dropdown-end sm:dropdown-start hover:bg-gb-lt-purple transition-background duration-300 cursor-pointer"
       :class="{
         'hidden sm:block w-auto px-0': isNav,
       }"
@@ -9,7 +9,7 @@
       <div tabindex="0" role="button" class="px-4 py-2">{{ buttonLabel }}</div>
       <ul
         tabindex="0"
-        class="menu text-sm dropdown-content bg-gb-dk-purple w-48"
+        class="menu dropdown-content text-sm bg-gb-dk-purple w-48"
       >
         <li v-for="cat in categories" :key="cat.label">
           <details>
