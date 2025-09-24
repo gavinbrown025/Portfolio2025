@@ -10,7 +10,10 @@
         <div class="min-w-[16rem] shrink grow basis-1/3">
           <div class="flex items-center gap-8">
             <h2>{{ project.title }}</h2>
-            <ProjectsDropdown class="grid place-items-center border-white border-2" buttonLabel="See More" />
+            <ProjectsDropdown
+              class="grid place-items-center border-base-content border-2"
+              buttonLabel="See More"
+            />
           </div>
           <h3 class="mb-8">{{ project.company }}</h3>
           <UIMultiParagraph :text="project.description" class="mb-12" />

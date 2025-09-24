@@ -2,13 +2,13 @@
   <UIContainer class="sticky top-0 !px-0">
     <nav
       class="flex justify-between px-8 py-4 sm:bg-transparent"
-      :class="isOpen ? 'bg-gb-dk-purple' : ''"
+      :class="isOpen ? 'bg-base-100' : ''"
     >
       <UILogo />
 
       <button
         @click="isOpen = !isOpen"
-        class="flex items-center sm:hidden text-3xl focus:outline-none cursor-pointer hover:bg-gb-lt-purple transition-background duration-300"
+        class="flex items-center sm:hidden text-3xl focus:outline-none cursor-pointer hover:bg-secondary/20 transition-background duration-300"
       >
         <UIIcon class="!text-[3rem]" icon="menu" />
       </button>
@@ -18,7 +18,7 @@
         :visible="fadeInTop.enter"
         :class="[
           // 'flex basis-1/2 items-center justify-end border-b text-lg',
-          'absolute w-full min-h-min top-5/6 left-0 text-lg bg-gb-dk-purple border-b',
+          'absolute w-full min-h-min top-5/6 left-0 text-lg bg-base-100 border-b',
           'sm:relative sm:flex sm:justify-end sm:basis-1/2 sm:items-center sm:bg-transparent',
           isOpen ? '' : 'hidden',
         ]"
@@ -27,7 +27,7 @@
         <li
           v-for="link in links"
           :key="link.to"
-          class="w-full sm:w-auto px-8 sm:px-0 text-lg sm:text-base hover:bg-gb-lt-purple transition-background duration-300"
+          class="w-full sm:w-auto px-8 sm:px-0 text-lg sm:text-base hover:bg-secondary/20 transition-background duration-300"
           @click="isOpen = false"
           @keydown.enter="isOpen = false"
         >

@@ -12,17 +12,19 @@ import ResumeButton from "@/components/ResumeButton.vue";
       <header
         class="w-full min-w-min py-24 col-start-1 row-start-1 col-span-2 sm:col-span-1 text-center sm:text-left justify-center sm:justify-start"
       >
-        <h1 class="text-[3.5rem] lg:text-5xl">Gavin Brown</h1>
-        <h2 class="mb-8">Frontend Developer</h2>
-        <p class="mb-16 text-lg">
-          Creating web interfaces to make digital experiences smooth and simple.
-        </p>
+        <p class="mb-4 text-lg text-accent">Hi, my name is </p>
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl mb-4">Gavin Brown</h1>
+        <h2
+          class="font-copy text-2xl sm:text-3xl lg:text-4xl mb-16 text-secondary font-semibold"
+        >
+          Making Digital experiences smooth and simple.
+        </h2>
 
         <div
           class="flex flex-wrap sm:flex-nowrap gap-8 justify-center sm:justify-start"
         >
           <RouterLink to="#experience">
-            <UIButtonAnim>Experience</UIButtonAnim>
+            <UIButtonAnim class="h-full">Experience</UIButtonAnim>
           </RouterLink>
           <ResumeButton>Download Resume</ResumeButton>
         </div>

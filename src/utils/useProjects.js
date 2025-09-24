@@ -15,8 +15,11 @@ export const projects = {
     title: "Twenty Eighty",
     company: "Catch Digital",
     category: "workExp",
+    intro: "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance.",
+    about: "A modern accounting firm website built with Webflow.",
+    features: "Webflow, Responsive Design, CMS Integration",
     description:
-      "Twenty Eighty is a modern accounting firm with a forward-thinking approach to small business finance.\n\nDuring my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand.\n\nThe site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services.\n\nI worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
+      "During my time at Catch Digital, I developed their website using Webflow, focusing on delivering a highly interactive and animated experience that reflects their dynamic brand.\n\nThe site features smooth transitions, engaging scroll effects, and intuitive navigation to clearly communicate Twenty Eighty’s value-driven, future-focused services.\n\nI worked closely with the design team to ensure the final product was both visually striking and easy for the client to update and maintain.",
     images: ["TwentyEightyMockup.png"],
     videos: ["TwentyEightyDemo.webm"],
     link: "https://www.twentyeighty.co/",

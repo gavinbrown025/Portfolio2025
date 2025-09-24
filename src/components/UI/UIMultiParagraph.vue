@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p v-for="(para, i) in paragraphs" :key="i" class="mb-4">{{ para }}</p>
+    <div v-for="(para, i) in paragraphs" :key="i" class="flex">
+      <slot />
+      <p class="mb-4">{{ para }}</p>
+    </div>
   </div>
 </template>
 

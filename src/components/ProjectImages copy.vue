@@ -2,7 +2,7 @@
   <div class="basis-1/2 grow grid grid-cols-[auto_1fr_auto] place-items-center sm:min-w-[36rem] sm:py-8">
     <div
       v-if="projectMedia.length > 1"
-      class="h-full grid place-items-center cursor-pointer p-1 hover:bg-gb-lt-purple/20"
+      class="h-full grid place-items-center cursor-pointer p-1 hover:bg-primary/20"
       @click="prevImage"
     >
       <UIIcon icon="arrow_back_ios" class="-mr-2" />
@@ -28,7 +28,7 @@
 
     <div
       v-if="projectMedia.length > 1"
-      class="h-full grid place-items-center cursor-pointer p-1 hover:bg-gb-lt-purple/20"
+      class="h-full grid place-items-center cursor-pointer p-1 hover:bg-primary/20"
       @click="nextImage"
     >
       <UIIcon icon="arrow_forward_ios" class="-mr-2" />
