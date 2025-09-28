@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section >
     <UIContainer
       v-motion
       :initial="fadeInBottom.initial"
@@ -7,12 +7,7 @@
       class="max-w-6xl grid min-h-min items-center"
     >
       <div class="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-x-12">
-        <h2 class="col-span-full w-min text-nowrap relative mb-8 text-shadow-lg inline">
-          About me
-          <div
-            class="-z-10 absolute bottom-0 -left-1 -right-8 h-1/4 bg-secondary/70"
-          />
-        </h2>
+        <UIHeadingAnim class="col-span-full">About me</UIHeadingAnim>
         <div class="mb-12 md:mb-0 space-y-4">
           <p>
             Hi, I’m a <span class="text-accent">Front-end Developer</span> based
@@ -45,12 +40,11 @@
           </div>
         </div>
 
-        <div
-          class="mx-auto p-4 sm:p-0 relative max-w-96 aspect-square"
-        >
+        <div class="mx-auto p-4 sm:p-0 relative max-w-96 aspect-square">
           <div
             class="absolute -z-10 inset-8 sm:inset-4 w-[calc(100%-2rem)] sm:w-full aspect-square min-w-[284px] rounded-lg border-4 border-accent"
           ></div>
+          <UIOverlaySlide dir="right" />
           <img
             :src="ProfilePic"
             alt="Gavin Brown"
@@ -64,8 +58,10 @@
 
 <script setup>
 import UIContainer from "@/components/UI/UIContainer.vue";
+import UIHeadingAnim from "@/components/UI/UIHeadingAnim.vue";
 import { fadeInBottom } from "@/utils/animations.js";
 import ProfilePic from "@/assets/images/headshot.png";
+import UIOverlaySlide from "./UI/UIOverlaySlide.vue";
 
 const skillLists = [
   ["React & Next.js", "Vue & Vite", "TypeScript"],

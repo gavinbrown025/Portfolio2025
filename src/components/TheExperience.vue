@@ -5,14 +5,11 @@
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
     >
-      <div class="grid sm:grid-cols-[auto_1fr] justify-between gap-x-6">
+      <div
+        class="max-w-4xl mx-auto grid sm:grid-cols-[auto_1fr] justify-between gap-x-6"
+      >
         <div class="col-span-full mb-12">
-          <h2 class="w-min text-nowrap relative text-shadow-lg inline">
-            Where I've worked
-            <div
-              class="-z-10 absolute bottom-0 -left-1 -right-8 h-1/4 bg-secondary/70"
-            />
-          </h2>
+          <UIHeadingAnim>Where I've worked</UIHeadingAnim>
           <p class="mt-4 max-w-2xl">
             I have worked with a variety of companies, from small startups to
             large corporations. My experience includes front-end development,
@@ -20,8 +17,10 @@
           </p>
         </div>
 
-        <WorkTabs />
-        <WorkDesc :current-exp="currentWork" />
+        <WorkTabs class="mb-8 border-b border-t border-base-300" />
+        <Transition name="fade" mode="out-in">
+          <WorkDesc :current-exp="currentWork" :key="currentWork" />
+        </Transition>
       </div>
     </UIContainer>
   </section>
@@ -30,8 +29,20 @@
 <script setup>
 import { currentWork } from "@/utils/useProjects.js";
 import UIContainer from "@/components/UI/UIContainer.vue";
+import UIHeadingAnim from "@/components/UI/UIHeadingAnim.vue";
 import WorkTabs from "@/components/WorkTabs.vue";
 import WorkDesc from "@/components/WorkDesc.vue";
 
 import { fadeInBottom } from "@/utils/animations.js";
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

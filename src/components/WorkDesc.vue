@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-base-100 p-6 sm:py-8 sm:px-12">
+  <div class="px-6">
     <h3 class="text-xl font-bold mb-2 ">
       {{ currentExp?.title }}
       <span class="text-accent">@ {{ currentExp?.company }}</span>
@@ -7,7 +7,7 @@
     <p class="mb-6 italic text-sm text-secondary">
       {{ currentExp?.date }}
     </p>
-    <UIMultiParagraph :text="currentExp?.description" class="mb-12" >
+    <UIMultiParagraph :text="currentExp?.description" class="mb-8" >
       <UIIcon icon="arrow_right" class="text-accent size-8" />
     </UIMultiParagraph>
     <RouterLink :to="`/showcase/${currentExp?.projects[0]}`">

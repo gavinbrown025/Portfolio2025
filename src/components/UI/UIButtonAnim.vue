@@ -1,5 +1,5 @@
 <template>
-  <button class="btn-gb group font-mono" :class="{ 'btn-active': active }">
+  <button class="btn btn-outline btn-accent relative group font-mono hover:btn-active" :class="{ 'btn-active': active }">
     <div
       class="lines group-hover:lines-active"
       :class="{ 'lines-active': active }"

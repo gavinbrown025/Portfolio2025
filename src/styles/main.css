@@ -56,7 +56,6 @@
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
 
-
     @apply relative
     min-h-screen
     min-w-[20rem]
@@ -100,7 +99,7 @@
   }
 
   section {
-    @apply w-full py-24 md:py-36 lg:py-48;
+    @apply w-full py-16 md:py-24 lg:py-32;
   }
 
   ul,
@@ -141,18 +140,14 @@
   );
 }
 
-@utility btn-gb {
-  @apply relative cursor-pointer min-w-[8rem] sm:min-w-[12rem] grid place-items-center border border-accent px-4 py-3 uppercase leading-none transition hover:btn-active;
-}
-
 @utility btn-active {
-  @apply bg-secondary text-secondary-content;
+  @apply bg-accent text-base-100;
 }
 
 @utility lines {
-  @apply h-[calc(100%-1.5rem)] w-4 absolute left-3 sm:left-4 -translate-y-[calc(100%+0.25rem)] border-primary border-l border-r transition-all duration-500;
+  @apply h-[calc(100%-1.25rem)] w-4 absolute left-3 sm:left-4 -translate-y-[calc(100%+0.25rem)] border-accent border-x transition-all duration-500;
 }
 
 @utility lines-active {
-  @apply border-base-100 !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)];
+  @apply border-black border-x-2 !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)];
 }

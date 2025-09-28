@@ -1,15 +1,15 @@
 <template>
   <div
-    class="basis-1/2 sm:min-w-[40rem] aspect-3/2 grow grid grid-cols-[auto_1fr_auto] gap-2 place-items-center sm:py-8"
+    class="sm:min-w-[28rem] aspect-3/2 grow grid grid-cols-[auto_1fr_auto] place-items-center"
   >
     <div
-      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-primary/20"
+      class="grid place-items-center cursor-pointer h-full hover:bg-primary/20 rotate-180"
       @click="prevImage"
     >
       <UIIcon
         v-if="projectMedia.length > 1"
-        icon="arrow_back_ios"
-        class="-mr-2"
+        icon="arrow_forward_ios"
+        class=""
       />
     </div>
 
@@ -17,7 +17,7 @@
       :style="transitionStyle"
       class="relative size-full overflow-hidden border-border-gb-lt-grey/0"
       :class="{
-        'mockup-window h-auto bg-base-100 border-2 border-gb-lt-grey/100 transition-all duration-200':
+        'mockup-window h-auto bg-base-100 border-2 border-accent/100 transition-all duration-200':
           videoActive,
       }"
     >
@@ -39,13 +39,13 @@
     </div>
 
     <div
-      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-primary/20"
+      class="grid place-items-center cursor-pointer h-full hover:bg-primary/20"
       @click="nextImage"
     >
       <UIIcon
         v-if="projectMedia.length > 1"
         icon="arrow_forward_ios"
-        class="-mr-2"
+        class=""
       />
     </div>
   </div>

@@ -6,11 +6,17 @@
         'hidden sm:block w-auto px-0': isNav,
       }"
     >
-      <div tabindex="0" role="button" class="px-4 py-2">{{ buttonLabel }}</div>
-      <ul
-        tabindex="0"
-        class="menu dropdown-content text-sm bg-base-100 w-48"
-      >
+      <div tabindex="0" role="button">
+        <template v-if="$slots.default">
+          <slot></slot>
+        </template>
+        <template v-else>
+          <div class="block px-4 py-2">
+            {{ buttonLabel }}
+          </div>
+        </template>
+      </div>
+      <ul tabindex="0" class="menu dropdown-content text-sm bg-base-100 w-48">
         <li v-for="cat in categories" :key="cat.label">
           <details>
             <summary>{{ cat.label }}</summary>
@@ -74,6 +80,7 @@
 <script setup>
 import { projects } from "@/utils/useProjects.js";
 import { RouterLink } from "vue-router";
+import UIButtonAnim from "./UI/UIButtonAnim.vue";
 
 const props = defineProps({
   isNav: { type: Boolean, default: false },
