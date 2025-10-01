@@ -1,40 +1,51 @@
 <template>
-  <div class="basis-1/2 sm:min-w-[40rem] aspect-3/2 grow grid grid-cols-[auto_1fr_auto] place-items-center sm:py-8">
+  <div
+    class="sm:min-w-[28rem] aspect-3/2 grow grid grid-cols-[auto_1fr_auto] place-items-center"
+  >
     <div
-      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-gb-lt-purple/20"
+      class="grid place-items-center cursor-pointer h-full hover:bg-primary/20 rotate-180"
       @click="prevImage"
     >
       <UIIcon
         v-if="projectMedia.length > 1"
-        icon="arrow_back_ios"
-        class="-mr-2"
+        icon="arrow_forward_ios"
+        class=""
       />
     </div>
 
     <div
-      class="relative size-full overflow-hidden"
       :style="transitionStyle"
+      class="relative size-full overflow-hidden border-border-gb-lt-grey/0"
+      :class="{
+        'mockup-window h-auto bg-base-100 border-2 border-accent/100 transition-all duration-200':
+          videoActive,
+      }"
     >
-      <Transition name="slide" mode="out-in">
+      <Transition
+        name="slide"
+        mode="out-in"
+        @after-enter="onBeforeEnter"
+        @before-leave="videoActive = false"
+      >
         <component
           :key="currentIndex"
           :is="currentMedia.type"
           :src="currentMedia.src"
           :controls="currentMedia.type === 'video'"
           alt="Project image"
-          class="absolute top-0 left-0 size-full object-contain pointer-events-auto"
+          class="size-full object-contain pointer-events-auto"
         />
       </Transition>
     </div>
 
     <div
-      class="grid place-items-center cursor-pointer h-full p-1 hover:bg-gb-lt-purple/20"
+      class="grid place-items-center cursor-pointer h-full hover:bg-primary/20"
       @click="nextImage"
     >
       <UIIcon
         v-if="projectMedia.length > 1"
         icon="arrow_forward_ios"
-        class="-mr-2"
+        class=""
       />
     </div>
   </div>
@@ -54,6 +65,11 @@ const currentIndex = ref(0);
 
 const imageMap = useProjectImages();
 const videoMap = useProjectVideos();
+
+const videoActive = ref(false);
+function onBeforeEnter() {
+  videoActive.value = currentMedia.value.type === "video";
+}
 
 const projectMedia = computed(() => {
   const imgArr = Array.isArray(props.images)

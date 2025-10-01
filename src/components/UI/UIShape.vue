@@ -1,8 +1,17 @@
 <template>
-  <div class="h-full w-full grid place-items-center">
-    <div class="shape absolute border-5 border-gb-lt-grey/80 " :style="circle1"></div>
-    <div class="shape absolute border-5 border-gb-lt-grey/80 " :style="circle2"></div>
-    <!-- <Logo class="h-40 w-40 object-contain" /> -->
+  <div class="size-full sm:size-full grid place-items-center">
+    <div class="absolute h-[133%] w-[200%] sm:size-full grid place-items-center">
+      <div
+        class="shape border-5 border-secondary/80"
+        :style="circle1"
+      />
+    </div>
+    <div class="absolute h-[150%] w-[200%] sm:size-full grid place-items-center">
+      <div
+        class="shape border-5 border-secondary/80"
+        :style="circle2"
+      />
+    </div>
   </div>
 </template>
 
@@ -16,6 +25,5 @@ const { styleObject: circle2 } = useShape();
 .shape {
   min-width: 300px;
   will-change: width, height, border-radius;
-  /* background: radial-gradient(circle, #515170 0%, #1c1c32 75%, #00000000 92%); */
 }
 </style>

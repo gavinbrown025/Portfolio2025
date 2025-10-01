@@ -1,80 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300");
+
 @import "tailwindcss";
 @plugin "daisyui";
 
 @theme {
-  --color-gb-white: #f1f1f1;
-  --color-gb-lt-grey: #d2d2d2;
-  --color-gb-md-grey: #ededf0;
-  --color-gb-dk-grey: #29292e;
-  --color-gb-black: #231f20;
-  --color-gb-lt-purple: #515170;
-  --color-gb-md-purple: #1a1a30;
-  --color-gb-dk-purple: #141425;
+  --font-copy: "Lato", "Helvetica", "Arial", "sans-serif";
+  --font-heading: "Lato", "Helvetica", "Arial", "sans-serif";
+  --font-mono: "Oxanium", "Courier New", Courier, monospace;
 
-  --font-copy: Oswald, "Helvetica", "Arial", "sans-serif";
-  --font-heading: Oswald, "Helvetica", "Arial", "sans-serif";
-  --text-sm: 0.875em;
-  --text-base: 1em;
-  --text-lg: 1.25em;
-  --text-xl: 1.75em;
-  --text-2xl: 2em;
-  --text-3xl: 2.5em;
-  --text-4xl: 3em;
-  --text-5xl: 3.5em;
-  --text-6xl: 4em;
   --radius-sm: 0.25em;
-  --radius-sm: 0.5em;
+  --radius-md: 0.5em;
   --radius-lg: 1em;
   --radius-xl: 2em;
 }
 
-
-
-@utility bg-rad-grad {
-  background-image: radial-gradient(circle, #1a1a30 50%, #141425 100%);
-}
-@utility bg-rad-grad-90 {
-  background-image: radial-gradient(
-    circle,
-    rgba(26, 26, 48, 0.9) 50%,
-    rgba(20, 20, 37, 0.9) 100%
-  );
-}
-
-@utility btn-active {
-  @apply bg-gb-lt-purple;
-}
-
-@utility btn-gb {
-  @apply relative cursor-pointer min-w-[8rem] sm:min-w-[12rem] grid place-items-center border px-4 py-3 uppercase leading-none transition hover:btn-active;
-}
-
-@utility lines-active {
-  @apply !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)]  ;
-}
-
-@utility lines {
-  @apply h-[calc(100%-1.25rem)] w-4 absolute left-3 sm:left-4 -translate-y-full border-l border-r transition-all duration-500;
+@plugin "daisyui/theme" {
+  default: true;
+  --color-base-100: oklch(13% 0.05 270);
+  --color-base-200: oklch(20% 0.05 270);
+  --color-base-300: oklch(30% 0.05 270);
+  --color-base-content: oklch(85% 0.013 236.62);
+  --color-primary: oklch(84% 0.143 200.978);
+  --color-primary-content: oklch(30% 0.043 257.281);
+  --color-secondary: oklch(70% 0.05 270);
+  --color-secondary-content: oklch(30% 0.043 257.281);
+  --color-accent: oklch(70% 0.1 200.62);
+  --color-accent-content: oklch(37% 0.034 259.733);
+  --color-neutral: oklch(55% 0.046 257.417);
+  --color-neutral-content: oklch(85% 0.08 200.62);
+  --color-info: oklch(86% 0.127 207.078);
+  --color-info-content: oklch(37% 0.034 259.733);
+  --color-success: oklch(87% 0.15 154.449);
+  --color-success-content: oklch(44% 0.119 151.328);
+  --color-warning: oklch(83% 0.128 66.29);
+  --color-warning-content: oklch(55% 0.195 38.402);
+  --color-error: oklch(80% 0.114 19.571);
+  --color-error-content: oklch(50% 0.213 27.518);
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 1;
 }
 
 @layer base {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    @apply text-gb-white;
-  }
-
   body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
-    background: var(--bg-rad-grad);
 
     @apply relative
     min-h-screen
@@ -82,13 +62,8 @@
     bg-rad-grad
     bg-fixed
     font-copy
-    font-light
-    leading-[1.2]
-    text-[1.125rem]
-    sm:text-[1.125rem]
-    lg:text-[1.25rem]
-    xl:text-[1.325rem]
-    bg-gb-dk-purple;
+    bg-base-200
+    text-base-content;
 
     &::-webkit-scrollbar {
       width: 0.5rem;
@@ -116,14 +91,15 @@
       height: 100vh;
     }
   }
-
+}
+@layer components {
   main {
     position: relative;
     overflow-x: hidden;
   }
 
   section {
-    @apply w-full py-24 md:py-36 lg:py-48;
+    @apply w-full py-16 md:py-24 lg:py-32;
   }
 
   ul,
@@ -144,16 +120,34 @@
   h4,
   h5,
   h6 {
+    @apply font-heading tracking-tight;
     line-height: 1.2;
-    font-weight: 300;
+    font-weight: 400;
   }
   h1 {
-    @apply text-4xl;
+    @apply text-5xl sm:text-6xl lg:text-7xl mb-4;
   }
-  h2 {
-    @apply text-3xl;
-  }
+  h2,
   h3 {
-    @apply text-lg;
+    @apply text-3xl lg:text-4xl mb-4;
   }
+}
+@utility bg-rad-grad {
+  background-image: radial-gradient(
+    circle,
+    var(--color-base-200) 50%,
+    var(--color-base-100) 100%
+  );
+}
+
+@utility btn-active {
+  @apply bg-accent text-base-100;
+}
+
+@utility lines {
+  @apply h-[calc(100%-1.25rem)] w-4 absolute left-3 sm:left-4 -translate-y-[calc(100%+0.25rem)] border-accent border-x transition-all duration-500;
+}
+
+@utility lines-active {
+  @apply border-black border-x-2 !translate-y-0 !w-[calc(100%-1.5rem)] sm:!w-[calc(100%-2rem)];
 }

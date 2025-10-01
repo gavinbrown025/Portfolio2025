@@ -22,3 +22,26 @@ export const mainLoader = {
     transition: { duration: 1500, ease: "easeInOut" },
   },
 };
+
+export const overlaySlideLeft = {
+  initial: { x: "0%" },
+  slide: {
+    x: "-100%",
+    transition: { delay: 500, duration: 1500, ease: "easeInOut" },
+  },
+};
+export const overlaySlideRight = {
+  initial: { x: "0%" },
+  slide: {
+    x: "100%",
+    transition: { delay: 500, duration: 1500, ease: "easeInOut" },
+  },
+};
+
+export const lineGrow = {
+  initial: { right: "100%" },
+  enter: {
+    right: "0%",
+    transition: { duration: 1000, ease: "easeInOut" },
+  },
+};
