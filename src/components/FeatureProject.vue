@@ -1,15 +1,23 @@
 <template>
-  <div class="grid grid-cols-12 items-center gap-4">
+  <div class="grid grid-cols-12 grid-rows-1 items-center gap-4">
     <div
-      class="h-full md:h-auto !row-start-1 !col-start-1 col-span-full md:col-span-8 lg:col-span-7 md:aspect-video bg-base-100"
+      class="h-full md:h-auto !row-start-1 col-span-full md:col-span-8 lg:col-span-7 md:aspect-video bg-base-100"
+      :class="{
+        '!col-start-1': !flip,
+        'md:col-start-6!': flip,
+      }"
     >
       <div class="relative size-full overflow-hidden">
-        <UIOverlaySlide dir="left" />
+        <UIOverlaySlide :dir="!flip ? 'left' : 'right'" />
         <img :src="image" alt="" class="object-cover w-full h-full" />
       </div>
     </div>
     <div
-      class="not-md:h-full not-md:p-6 not-md:bg-base-300/60 not-md:backdrop-blur-sm flex flex-col md:items-end md:text-right z-10 row-start-1 col-start-1 col-span-full md:col-span-8 lg:col-span-7 md:col-start-6 lg:col-start-7"
+      class="not-md:h-full not-md:p-6 not-md:bg-base-300/60 not-md:backdrop-blur-sm flex flex-col z-10 row-start-1 col-start-1 col-span-full md:col-span-8 lg:col-span-7"
+      :class="{
+        'md:col-start-6 lg:col-start-7 md:items-end md:text-right': !flip,
+        '!col-start-1': flip,
+      }"
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
@@ -29,7 +37,12 @@
           {{ value }}
         </li>
       </ul>
-      <div class="flex flex-wrap gap-8 md:justify-end">
+      <div
+        class="flex flex-wrap gap-8"
+        :class="{
+          'md:justify-end': !flip,
+        }"
+      >
         <RouterLink :to="`/showcase/${currentProject.title}`">
           <UIButtonAnim> Learn More </UIButtonAnim>
         </RouterLink>
@@ -55,6 +68,7 @@ import UIMultiParagraph from "./UI/UIMultiParagraph.vue";
 
 const props = defineProps({
   project: { type: String, default: "Expense Tracker" },
+  flip: Boolean,
 });
 
 const currentProject = projects[props.project];

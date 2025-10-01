@@ -4,7 +4,7 @@
     <component
       :is="inputType"
       v-model="inputValue"
-      class="border-l-4 border-b-1 border-base-content p-2 outline-0 autofill:bg-yellow-200 valid:border-green-300 user-invalid:border-red-300"
+      class="border-l-4 border-b-1 border-secondary p-2 outline-0 autofill:bg-accent/10 valid:primary user-invalid:border-error"
       :class="{ filled: inputValue }"
       :type="type"
       :name="name"

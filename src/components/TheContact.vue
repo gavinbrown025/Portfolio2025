@@ -1,18 +1,20 @@
 <template>
-  <section class="flex flex-wrap">
+  <section class="bg-base-100">
     <UIContainer
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
-      class="flex justify-center"
+      class="grid md:grid-cols-[3fr_5fr] items-center gap-8"
     >
+      <UIHeadingAnim class="not-sm:ml-6 col-span-full mb-12">
+        What can I do for you?
+      </UIHeadingAnim>
       <form
         @submit.prevent="sendMail"
         id="contact-form"
         method="post"
-        class="space-y-8 sm:basis-1/2 grow shrink max-w-[48rem]"
+        class="space-y-8 max-w-[36rem] not-sm:px-6"
       >
-        <h2>What can I do for you?</h2>
         <div v-for="{ name, type, label } in inputs" :key="name">
           <UIInput
             v-model="formData[name]"
@@ -22,13 +24,18 @@
             required
           />
         </div>
-        <div class="mt-12 flex gap-12 items-center">
+        <div class="mt-12 grid grid-cols-2 gap-4 items-center">
           <UIButtonAnim type="submit">Send</UIButtonAnim>
-          <p>{{ formMessage }}</p>
+          <UIButtonAnim type="button" icon="open_in_new" href="mailto:gavinbrown025@gmail.com">
+            Email
+          </UIButtonAnim>
+          <p class="col-span-full">
+            {{ formMessage }}
+          </p>
         </div>
       </form>
+      <SceneAnimCon class="row-start-1" />
     </UIContainer>
-    <!-- <CloudAnim /> -->
   </section>
 </template>
 
@@ -39,7 +46,11 @@ import { reactive, ref } from "vue";
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIInput from "@/components/UI/UIInput.vue";
 import UIButtonAnim from "@/components/UI/UIButtonAnim.vue";
+import UIIcon from "@/components/UI/UIIcon.vue";
 import { fadeInBottom } from "@/utils/animations.js";
+
+import SceneAnimCon from "@/components/SceneAnimCon.vue";
+import UIHeadingAnim from "@/components/UI/UIHeadingAnim.vue";
 
 const inputs = [
   { name: "name", type: "text", label: "Your Name" },

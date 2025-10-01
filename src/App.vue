@@ -2,9 +2,15 @@
 import { watchEffect, ref, computed } from "vue";
 import TheNav from "@/components/TheNav.vue";
 import TheContact from "@/components/TheContact.vue";
+import SideBar from "@/components/SideBar.vue";
+import TheFooter from "./components/TheFooter.vue";
+import UIContainer from "@/components/UI/UIContainer.vue";
+import SceneAnimCon from "@/components/SceneAnimCon.vue";
 
 import { mainLoader } from "@/utils/animations.js";
 import { useScroll } from "@vueuse/core";
+
+import { fadeInBottom } from "@/utils/animations.js";
 
 const { y, directions, isScrolling } = useScroll(window);
 
@@ -18,11 +24,13 @@ watchEffect(() => {
 </script>
 
 <template>
-  <!-- <div class="sticky top-4 w-10 h-10 bg-red-500">{{ activeView }}</div> -->
   <TheNav
     class="sticky z-10 transition-all duration-500"
     :class="{ '-translate-y-full': !showNav, 'bg-base-100/90': !atTop }"
   />
+
+  <SideBar />
+
   <main
     v-motion
     :initial="mainLoader.initial"
@@ -31,6 +39,7 @@ watchEffect(() => {
   >
     <RouterView />
     <TheContact id="contact" />
-    <div id="footer" class="h-12 bg-base-100" />
+
+    <TheFooter />
   </main>
 </template>

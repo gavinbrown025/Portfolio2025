@@ -2,13 +2,11 @@
 import TheHeader from "@/components/TheHeader.vue";
 import TheProfile from "@/components/TheProfile.vue";
 import TheExperience from "@/components/TheExperience.vue";
-import TheEducation from "@/components/TheEducation.vue";
 import FeatureProjects from "@/components/FeatureProjects.vue";
 
 import { useActiveView } from "@/utils/useActiveView.js";
 
 useActiveView();
-
 </script>
 
 <template>
@@ -16,5 +14,4 @@ useActiveView();
   <TheProfile id="profile" />
   <TheExperience id="experience" />
   <FeatureProjects id="projects" />
-  <TheEducation id="education" />
 </template>

@@ -8,7 +8,10 @@
       <div
         class="flex justify-between gap-8 pb-6 mb-6 border-b border-secondary/30"
       >
-        <UIHeadingAnim>{{ project.title }}</UIHeadingAnim>
+        <div>
+          <UIHeadingAnim>{{ project.title }}</UIHeadingAnim>
+          <p class="text-secondary">{{ project.company }}</p>
+        </div>
         <ProjectsDropdown>
           <UIButtonAnim>Other Projects</UIButtonAnim>
         </ProjectsDropdown>
@@ -56,7 +59,15 @@
           class="md:col-start-8 md:col-span-5 md:row-start-3 bg-base-300/70 p-5 shadow-lg"
         >
           <h4 class="font-bold text-lg text-accent mb-2">Features</h4>
-          <UIMultiParagraph :text="project.features" />
+          <div class="flex flex-wrap gap-2">
+            <p
+              v-for="value in project.features"
+              :key="value"
+              class="text-xs py-1 px-2 mb-2 bg-base-200/50 backdrop-blur-sm border border-accent rounded-md"
+            >
+              {{ value }}
+            </p>
+          </div>
         </div>
       </div>
     </UIContainer>
