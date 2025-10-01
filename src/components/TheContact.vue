@@ -4,7 +4,7 @@
       v-motion
       :initial="fadeInBottom.initial"
       :visible-once="fadeInBottom.enter"
-      class="grid md:grid-cols-[3fr_5fr] items-center gap-8"
+      class="grid md:grid-cols-[5fr_7fr] items-center gap-8"
     >
       <UIHeadingAnim class="not-sm:ml-6 col-span-full mb-12">
         What can I do for you?
@@ -34,7 +34,7 @@
           </p>
         </div>
       </form>
-      <SceneAnimCon class="row-start-1" />
+      <SceneAnimCon />
     </UIContainer>
   </section>
 </template>
