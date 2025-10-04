@@ -2,7 +2,7 @@
   <div class="sticky top-0 !px-0">
     <UIContainer>
       <nav
-        class="flex justify-between px-8 py-4 sm:bg-transparent"
+        class="flex justify-between py-4 sm:bg-transparent"
         :class="isOpen ? 'bg-base-100' : ''"
       >
         <UILogo />
