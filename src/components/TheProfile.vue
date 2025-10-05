@@ -60,7 +60,7 @@
 import UIContainer from "@/components/UI/UIContainer.vue";
 import UIHeadingAnim from "@/components/UI/UIHeadingAnim.vue";
 import { fadeInBottom } from "@/utils/animations.js";
-import ProfilePic from "@/assets/images/headshot.png";
+import ProfilePic from "@/assets/images/headshot.jpg";
 import UIOverlaySlide from "./UI/UIOverlaySlide.vue";
 
 const skillLists = [
