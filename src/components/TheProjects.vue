@@ -1,5 +1,5 @@
 <template>
-  <section class="grid place-items-center">
+  <section class="py-16">
     <UIContainer
       v-motion
       :initial="fadeInBottom.initial"
